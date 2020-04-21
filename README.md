@@ -5,3 +5,4 @@ ___
 
 [docs](http://jonyk56.github.io/discord.js-parody)
 
+<iframe src="https://discordapp.com/widget?id=702215705898254338&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>

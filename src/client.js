@@ -16,6 +16,6 @@ module.exports.ParodyClient = class extends Client{
      * @param {Object} options not yet used
      */
     Parody(options = {}){
-        this.users = this.users.cache
+        this.users = this.users.cache;
     }
 }
