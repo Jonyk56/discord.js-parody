@@ -5,4 +5,4 @@ ___
 
 [docs](http://jonyk56.github.io/discord.js-parody)
 
-![Discord Banner 2](https://discordapp.com/api/guilds/702215705898254338/widget.png?style=banner2)
+[![Discord Banner 2](https://discordapp.com/api/guilds/702215705898254338/widget.png?style=banner2)](discord.gg/WPbF3eV)
