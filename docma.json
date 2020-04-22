@@ -5,7 +5,7 @@
     },
     { "guide": "./README.md" }
   ],
-  "dest": "./docs",
+  "dest": "./docs/src",
   "clean": true,
   "app":{
       "base":"/src"
