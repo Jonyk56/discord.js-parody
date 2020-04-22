@@ -1,5 +1,5 @@
 const dcma = require("docma");
-dcma.create().Build({
+dcma.create().build({
     "src": [
         {
             "src": ["./src/*", "index.js"]
