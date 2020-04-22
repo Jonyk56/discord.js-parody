@@ -1,0 +1,5 @@
+{
+    "src":["./src/*", "README.md", "index.js"],
+    "dest":"./docs",
+    "clean":true
+}
