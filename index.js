@@ -1,5 +1,5 @@
 module.exports = {
     ...require("./src/client"),
-    ...require("./src/embed"),
+    ...require("./src/Embed"),
     ...require("discord.js")
 }

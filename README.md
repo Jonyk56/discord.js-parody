@@ -6,3 +6,7 @@ ___
 [docs](http://jonyk56.github.io/discord.js-parody)
 
 [![Discord Banner 2](https://discordapp.com/api/guilds/702215705898254338/widget.png?style=banner2)](//discord.gg/WPbF3eV)
+
+
+***warning***
+currently The Parody method of the parody client is broken, do not use it!

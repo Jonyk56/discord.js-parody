@@ -8,20 +8,13 @@ const { UserManager, ChannelManager, GuildManager, Client } = require("discord.j
  */
 module.exports.ParodyClient = class extends Client {
     constructor(options = {}) {
-        super(options).then(gx => {
-            return new Promise((resolve, reject) => {
-                try {
-                    this.Parody();
-                    resolve(this);
-                } catch (e) {
-                    reject(e)
-                }
-            })
-        })
+        super(options)
+        return this
     }
     /**
      * Initializes Parity Updater
      * @since 0.0.1
+     * @description This currently does NOT work, do not use!!!
      * @param {Object} options not yet used
      * @returns {Client} Client
      */
