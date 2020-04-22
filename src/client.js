@@ -25,6 +25,7 @@ module.exports.ParodyClient = class extends Client {
     /**
      * Gains User cache, moves all of it to a seperate object
      * @method UserCache
+     * @public
      * @param {UserCacheData} Data
      * @returns null
      */
