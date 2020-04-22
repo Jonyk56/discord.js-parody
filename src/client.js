@@ -27,9 +27,8 @@ module.exports.ParodyClient = class extends Client {
      * @method UserCache
      * @param {UserCacheData} Data
      * @returns null
-     * @public
      */
-    static UserCache(Data = {}) {
+    UserCache(Data = {}) {
         if (Data == {}) {
             Data = this;
         }
