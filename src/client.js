@@ -5,11 +5,13 @@ const {
     Client,
     Collection,
 } = require("discord.js");
+/**
+ * @file client
+ */
 //@ts-ignore 1005
 /**
  * Parity client hub
  * @class ParodyClient
- * @module client
  * @extends {Client} Discord.js Client
  * @since 0.0.1
  */
