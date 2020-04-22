@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 /**
      * @typedef {Array} EmbedOptions
+     * @description Array to extend from
      */
 /**
  * @extends Discord.js.MessageEmbed
