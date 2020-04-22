@@ -1,8 +1,10 @@
 {
-    "src":[{
-        "src":[ "./src/*", "index.js"],
-        
-    }, { "guide":"./README.md"}],
-    "dest":"./docs",
-    "clean":true
+  "src": [
+    {
+      "src": ["./src/*", "index.js"]
+    },
+    { "guide": "./README.md" }
+  ],
+  "dest": "./docs",
+  "clean": true
 }
