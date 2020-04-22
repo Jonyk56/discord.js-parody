@@ -3,7 +3,7 @@ const { UserManager, ChannelManager, GuildManager, Client } = require("discord.j
 /**
  * Parity client hub 
  * @class ParodyClient
- * @extends Discord.js.Client
+ * @extends Client
  * @since 0.0.1
  */
 module.exports.ParodyClient = class extends Client{
@@ -29,6 +29,5 @@ module.exports.ParodyClient = class extends Client{
             ...this.channels,
             ...this.channels.cache
         }
-        
     }
 }
