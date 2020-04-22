@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "discord.js": "^12.2.0",
+    "docma": "^3.2.2",
     "minami": "^1.2.3"
   },
   "devDependencies": {
