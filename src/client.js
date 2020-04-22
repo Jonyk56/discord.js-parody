@@ -6,7 +6,7 @@ const {
     Collection,
 } = require("discord.js");
 /**
- * @file client
+ * @module Client
  */
 //@ts-ignore 1005
 /**

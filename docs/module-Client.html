@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>RichEmbed - Documentation</title>
+    <title>Client - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">RichEmbed</h1>
+    <h1 class="page-title">Client</h1>
     
 
     
@@ -41,9 +41,6 @@
 
 <header>
     
-        <h2>
-        RichEmbed
-        </h2>
         
     
 </header>
@@ -52,11 +49,40 @@
     <div class="container-overview">
     
         
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-Client-ParodyClient.html">ParodyClient</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
 <div class="section-method">
 
     
 
-    <h4 class="name" id="RichEmbed"><span class="type-signature"></span>new RichEmbed<span class="signature">(embed)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="~ChannelCache"><span class="type-signature">(inner) </span>ChannelCache<span class="signature">(ChannelOptions)</span><span class="type-signature"></span></h4>
 
     
 
@@ -70,9 +96,6 @@
 
     
 
-    
-    <dt class="tag-since">Since:</dt>
-    <dd class="tag-since"><ul class="dummy"><li>0.1.14-beta</li></ul></dd>
     
 
     
@@ -98,7 +121,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Embed.js.html">Embed.js</a>, <a href="Embed.js.html#line19">line 19</a>
+        <a href="client.js.html">client.js</a>, <a href="client.js.html#line48">line 48</a>
     </li></ul></dd>
     
 
@@ -142,13 +165,13 @@
 
         <tr>
             
-                <td class="name"><code>embed</code></td>
+                <td class="name"><code>ChannelOptions</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><code><a href="global.html#EmbedOptions">EmbedOptions</a></code></span>
+<span class="param-type"><code><a href="global.html#ChannelOptions">ChannelOptions</a></code></span>
 
 
             
@@ -181,49 +204,178 @@
 
 
 
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+
+<div class="param-desc">
+    null
+</div>
+
+    
+</div>
+
 
 
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>new RichEmbed();</code></pre>
+    <pre class="prettyprint"><code>Client.ChannelCache({ filter: _ => _.id > 0}).each( channel => console.log(channel.name))</code></pre>
 
 </div>
 
 </div>
-    
-    </div>
+        
+            
+<div class="section-method">
 
     
-        <h3 class="subsection-title">Extends</h3>
+
+    <h4 class="name" id="~UserCache"><span class="type-signature">(inner) </span>UserCache<span class="signature">(Data)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Gains User cache, moves all of it to a seperate object
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="client.js.html">client.js</a>, <a href="client.js.html#line29">line 29</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code><a href="global.html#UserCacheData">UserCacheData</a></code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
 
         
 
 
-    <ul>
-        <li>Discord.js.MessageEmbed</li>
-    </ul>
-
-
-    
+<div class="param-desc">
+    null
+</div>
 
     
+</div>
 
-    
-        <h3 class="subsection-title">Classes</h3>
 
-        <dl>
-            <dt><a href="RichEmbed.html">RichEmbed</a></dt>
-            <dd></dd>
-        </dl>
-    
 
-     
-
-    
-
-    
-
+</div>
+        
     
 
     
