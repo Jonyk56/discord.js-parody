@@ -14,11 +14,21 @@ module.exports.ParodyClient = class extends Client{
      * Initializes Parity Updater
      * @since 0.0.1
      * @param {Object} options not yet used
+     * @returns {Client} Client
      */
     Parody(options = {}){
         this.users = {
             ...this.users,
             ...this.users.cache
         }
+        this.guilds = {
+            ...this.guilds,
+            ...this.guilds.cache
+        }
+        this.channels = {
+            ...this.channels,
+            ...this.channels.cache
+        }
+        
     }
 }
