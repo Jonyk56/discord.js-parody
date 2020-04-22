@@ -8,7 +8,15 @@ const { UserManager, ChannelManager, GuildManager, Client } = require("discord.j
  */
 module.exports.ParodyClient = class extends Client{
     constructor(options = {}){
-        super(options)    
+        super(options).then(gx => {
+            return new Promise((resolve, reject) => {
+                try{
+                    this.Parody();
+                    resolve(this);
+                }catch(e){
+                    reject(e)
+                }
+        })
     }
     /**
      * Initializes Parity Updater
