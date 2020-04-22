@@ -6,6 +6,7 @@ const { MessageEmbed } = require("discord.js")
 /**
  * @extends Discord.js.MessageEmbed
  * @class
+ * @public
  * @example
  * new RichEmbed();
  * @since 0.1.14-beta

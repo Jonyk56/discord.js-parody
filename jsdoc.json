@@ -6,7 +6,7 @@
     "excludePattern": "(^|\\/|\\\\)_"
   },
   "opts": {
-   
+    "template": "node_modules/minami",
     "destination":"./docs"
   }
 }
