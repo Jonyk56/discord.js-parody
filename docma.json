@@ -6,5 +6,8 @@
     { "guide": "./README.md" }
   ],
   "dest": "./docs",
-  "clean": true
+  "clean": true,
+  "app":{
+      "base":"/src"
+  }
 }
