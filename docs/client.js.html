@@ -68,6 +68,7 @@ module.exports.ParodyClient = class extends Client {
     /**
      * @global
      * @typedef {UserManager} UserCacheData
+     * @description Data of user collections
      */
 
     /**
@@ -87,18 +88,25 @@ module.exports.ParodyClient = class extends Client {
      * @global
      * @typedef {object} ChannelOptions
      * @property {Function} filter
-     * @property {ChannelManager} ChannelData  
+     * @property {ChannelManager} ChannelData
      */
     /**
      * @method ChannelCache
-     * @param {ChannelOptions} ChannelOptions 
+     * @param {ChannelOptions} ChannelOptions
      * @public
      * @returns null
+     * @example 
+     * Client.ChannelCache.each( channel => console.log(channel.name))
      */
-    ChannelCache(ChannelOptions = {}){
-        if (!ChannelOptions.filter){
-
+    ChannelCache(ChannelOptions = {}) {
+        if (!ChannelOptions.filter) {
+            throw new Error("Filter function required");
         }
+        if (ChannelOptions.ChannelData) {
+            var { ChannelData } = ChannelOptions;
+            this._channels = this.cache._channels = ChannelData
+        }
+        this.channels.cache.filter(ChannelOptions.filter)
     }
 };
 </code></pre>
