@@ -1,21 +1,22 @@
 const { UserManager, ChannelManager, GuildManager, Client } = require("discord.js");
-
+//@ts-ignore 1005
 /**
  * Parity client hub 
  * @class ParodyClient
  * @extends {Client} Discord.js Client
  * @since 0.0.1
  */
-module.exports.ParodyClient = class extends Client{
-    constructor(options = {}){
+module.exports.ParodyClient = class extends Client {
+    constructor(options = {}) {
         super(options).then(gx => {
             return new Promise((resolve, reject) => {
-                try{
+                try {
                     this.Parody();
                     resolve(this);
-                }catch(e){
+                } catch (e) {
                     reject(e)
                 }
+            })
         })
     }
     /**
@@ -24,7 +25,7 @@ module.exports.ParodyClient = class extends Client{
      * @param {Object} options not yet used
      * @returns {Client} Client
      */
-    Parody(options = {}){
+    Parody(options = {}) {
         this.users = {
             ...this.users,
             ...this.users.cache

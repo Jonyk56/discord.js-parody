@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Global - Documentation</title>
+    <title>client.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,170 +29,60 @@
 
 <div id="main">
     
-    <h1 class="page-title">Global</h1>
+    <h1 class="page-title">client.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        <h2>
-        
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        
-                
-<div class="section-members">
-<h4 class="name" id="EmbedOptions">EmbedOptions</h4>
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Embed.js.html">Embed.js</a>, <a href="Embed.js.html#line2">line 2</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type"><code>Array</code></span>
-|
-
-<span class="param-type"><code>undefined</code></span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</div>
-
-            
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const { UserManager, ChannelManager, GuildManager, Client } = require("discord.js");
+//@ts-ignore 1005
+/**
+ * Parity client hub 
+ * @class ParodyClient
+ * @extends {Client} Discord.js Client
+ * @since 0.0.1
+ */
+module.exports.ParodyClient = class extends Client {
+    constructor(options = {}) {
+        super(options).then(gx => {
+            return new Promise((resolve, reject) => {
+                try {
+                    this.Parody();
+                    resolve(this);
+                } catch (e) {
+                    reject(e)
+                }
+            })
+        })
+    }
+    /**
+     * Initializes Parity Updater
+     * @since 0.0.1
+     * @param {Object} options not yet used
+     * @returns {Client} Client
+     */
+    Parody(options = {}) {
+        this.users = {
+            ...this.users,
+            ...this.users.cache
+        }
+        this.guilds = {
+            ...this.guilds,
+            ...this.guilds.cache
+        }
+        this.channels = {
+            ...this.channels,
+            ...this.channels.cache
+        }
+    }
+}</code></pre>
+        </article>
+    </section>
 
 
 
