@@ -7,6 +7,6 @@
   },
   "opts": {
     "template": "node_modules/minami",
-    "desination":"./docs"
+    "destination":"./docs"
   }
 }
