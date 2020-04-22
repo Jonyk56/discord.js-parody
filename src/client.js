@@ -56,8 +56,8 @@ module.exports.ParodyClient = class extends Client {
         }
         if (ChannelOptions.ChannelData) {
             var { ChannelData } = ChannelOptions;
-            this._channels = this.cache._channels = ChannelData
+            this._channels = this.cache._channels = ChannelData.filter(ChannelOptions.filter)
         }
-        this.channels.cache.filter(ChannelOptions.filter)
+        this._channels = this.channels.cache.filter(ChannelOptions.filter)
     }
 };
