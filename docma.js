@@ -1,5 +1,5 @@
 const dcma = require("docma");
-new dcma().Build({
+dcma.create().Build({
     "src": [
         {
             "src": ["./src/*", "index.js"]
@@ -10,3 +10,5 @@ new dcma().Build({
     "clean": true
 }
 )
+
+dcma
