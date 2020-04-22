@@ -48,7 +48,7 @@ module.exports.ParodyClient = class extends Client {
      * @public
      * @returns null
      * @example 
-     * Client.ChannelCache.each( channel => console.log(channel.name))
+     * Client.ChannelCache({ filter: _ => _.id > 0}).each( channel => console.log(channel.name))
      */
     ChannelCache(ChannelOptions = {}) {
         if (!ChannelOptions.filter) {
