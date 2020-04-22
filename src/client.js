@@ -19,17 +19,22 @@ module.exports.ParodyClient = class extends Client {
      * @returns {Client} Client
      */
     Parody(options = {}) {
-        this.users = {
-            ...this.users,
-            ...this.users.cache
-        }
-        this.guilds = {
-            ...this.guilds,
-            ...this.guilds.cache
-        }
-        this.channels = {
-            ...this.channels,
-            ...this.channels.cache
+        this.on.bind("error", e => { console.error(e)})
+        try {
+            this.users = {
+                ...this.users,
+                ...this.users.cache
+            }
+            this.guilds = {
+                ...this.guilds,
+                ...this.guilds.cache
+            }
+            this.channels = {
+                ...this.channels,
+                ...this.channels.cache
+            }
+        } catch (e) { 
+            this.emit("error", e);
         }
     }
 }
