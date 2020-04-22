@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>client.js - Documentation</title>
+    <title>src/Embed - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,85 +29,58 @@
 
 <div id="main">
     
-    <h1 class="page-title">client.js</h1>
+    <h1 class="page-title">src/Embed</h1>
     
 
     
 
 
 
-    
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>const {
-    UserManager,
-    ChannelManager,
-    GuildManager,
-    Client,
-    Collection,
-} = require("discord.js");
-/**
- * @module src/client
- */
-//@ts-ignore 1005
-/**
- * Parity client hub
- * @class ParodyClient
- * @extends {Client} Discord.js Client
- * @since 0.0.1
- */
-module.exports.ParodyClient = class extends Client {
-    constructor(options = {}) {
-        super(options);
-        return this;
-    }
-    /**
-     * @global
-     * @typedef {UserManager} UserCacheData
-     * @description Data of user collections
-     */
 
-    /**
-     * Gains User cache, moves all of it to a seperate object
-     * @method UserCache
-     * @public
-     * @param {UserCacheData} Data
-     * @returns null
-     */
-    UserCache(Data = {}) {
-        if (Data == {}) {
-            Data = this;
-        }
-        this._users = this._cache.users = Data;
-    }
-    /**
-     * @global
-     * @typedef {object} ChannelOptions
-     * @property {Function} filter
-     * @property {ChannelManager} ChannelData
-     */
-    /**
-     * @method ChannelCache
-     * @param {ChannelOptions} ChannelOptions
-     * @public
-     * @returns null
-     * @example 
-     * Client.ChannelCache({ filter: _ => _.id > 0}).each( channel => console.log(channel.name))
-     */
-    ChannelCache(ChannelOptions = {}) {
-        if (!ChannelOptions.filter) {
-            throw new Error("Filter function required");
-        }
-        if (ChannelOptions.ChannelData) {
-            var { ChannelData } = ChannelOptions;
-            this._channels = this.cache._channels = ChannelData.filter(ChannelOptions.filter)
-        }
-        this._channels = this.channels.cache.filter(ChannelOptions.filter)
-    }
-};
-</code></pre>
-        </article>
-    </section>
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-src_Embed.RichEmbed.html">RichEmbed</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
