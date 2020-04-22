@@ -1,40 +1,38 @@
-const { UserManager, ChannelManager, GuildManager, Client } = require("discord.js");
+const {
+    UserManager,
+    ChannelManager,
+    GuildManager,
+    Client,
+    Collection,
+} = require("discord.js");
 //@ts-ignore 1005
 /**
- * Parity client hub 
+ * Parity client hub
  * @class ParodyClient
  * @extends {Client} Discord.js Client
  * @since 0.0.1
  */
 module.exports.ParodyClient = class extends Client {
     constructor(options = {}) {
-        super(options)
-        return this
+        super(options);
+        return this;
     }
     /**
-     * Initializes Parity Updater
-     * @since 0.0.1
-     * @description This currently does NOT work, do not use!!!
-     * @param {Object} options not yet used
-     * @returns {Client} Client
+     * @global
+     * @typedef {UserManager} UserCacheData
      */
-    Parody(options = {}) {
-        this.on.bind("error", e => { console.error(e)})
-        try {
-            this.users = {
-                ...this.users,
-                ...this.users.cache
-            }
-            this.guilds = {
-                ...this.guilds,
-                ...this.guilds.cache
-            }
-            this.channels = {
-                ...this.channels,
-                ...this.channels.cache
-            }
-        } catch (e) { 
-            this.emit("error", e);
+
+    /**
+     * Gains User cache, moves all of it to a seperate object
+     * @method UserCache
+     * @param {UserCacheData} Data
+     * @returns null
+     * @public
+     */
+    static UserCache(Data = {}) {
+        if (Data == {}) {
+            Data = this;
         }
+        this._users = this._cache.users = Data;
     }
-}
+};
