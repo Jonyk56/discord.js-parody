@@ -304,11 +304,5 @@ window.esdocSearchIndex = [
     "file/src/guild.js.html",
     "src/guild.js",
     "file"
-  ],
-  [
-    "src/index.js",
-    "file/src/index.js.html",
-    "src/index.js",
-    "file"
   ]
 ]

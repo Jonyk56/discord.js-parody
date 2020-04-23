@@ -943,17 +943,6 @@
     "ignore": true
   },
   {
-    "__docId__": 64,
-    "kind": "file",
-    "name": "src/index.js",
-    "content": "module.exports = {\n    ...require(\"./client\"),\n    ...require(\"./Embed\"),\n    ...require(\"discord.js\"),\n    ...require(\"./guild\")\n}",
-    "static": true,
-    "longname": "/home/jtech/discord.js-extended/src/index.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
     "kind": "index",
     "content": "# @jonyk56/discord.js-parody\n___\n\n![npm (scoped)](https://img.shields.io/npm/v/@jonyk56/discord.js-parody?style=plastic)\n\n[docs](http://jonyk56.github.io/discord.js-parody/index.html)\n\n[![Discord Banner 2](https://discordapp.com/api/guilds/702215705898254338/widget.png?style=banner2)](//discord.gg/WPbF3eV)\n\n",
     "longname": "/home/jtech/discord.js-extended/README.md",
@@ -963,7 +952,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@jonyk56/discord.js-parody\",\n  \"version\": \"0.1.18-beta-02\",\n  \"description\": \"\",\n  \"main\": \"src/index.js\",\n  \"dependencies\": {\n    \"discord.js\": \"^12.2.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  },\n  \"devDependencies\": {\n    \"eslint\": \"^6.8.0\"\n  },\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"postinstall\": \"npm i\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"_moduleAliases\": {}\n}\n",
+    "content": "{\n  \"name\": \"@jonyk56/discord.js-parody\",\n  \"version\": \"0.1.18-beta-03\",\n  \"description\": \"\",\n  \"main\": \"src/index.js\",\n  \"dependencies\": {\n    \"discord.js\": \"^12.2.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  },\n  \"devDependencies\": {\n    \"eslint\": \"^6.8.0\"\n  },\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"postinstall\": \"npm i\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"_moduleAliases\": {}\n}\n",
     "longname": "/home/jtech/discord.js-extended/package.json",
     "name": "package.json",
     "static": true,

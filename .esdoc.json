@@ -1,21 +1,5 @@
 {
   "source": "./src",
   "destination": "./docs",
-  "plugins": [
-    { "name": "esdoc-standard-plugin" },
-    {
-      "name": "esdoc-ecmascript-proposal-plugin",
-      "option": {
-        "classProperties": true,
-        "objectRestSpread": true,
-        "doExpressions": true,
-        "functionBind": true,
-        "functionSent": true,
-        "asyncGenerators": true,
-        "decorators": true,
-        "exportExtensions": true,
-        "dynamicImport": true
-      }
-    }
-  ]
+  "plugins": [{"name": "esdoc-standard-plugin"}]
 }
