@@ -21,12 +21,23 @@ const {
  */
 
 /**
+ * @typedef {*} goptions
+ * Guild Manager Options
+ */
+ /**
  * guild hub
  * @since 0.2.0-beta
  * @class GHUB
  */
 
 module.exports.GHUB = class extends GuildManager {
+  /**
+   * 
+   * @param  {goptions} goptions 
+   */
+  constructor(...goptions){
+    super(...goptions)
+  }
   /**
    * @typedef {string} Snowflake
    */
