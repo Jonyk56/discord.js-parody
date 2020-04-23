@@ -20,7 +20,6 @@ module.exports.ParodyClient = class extends Client {
         return this;
     }
     /**
-     * @global
      * @typedef {UserManager} UserCacheData
      * @description Data of user collections
      */
@@ -39,7 +38,6 @@ module.exports.ParodyClient = class extends Client {
         this._users = this._cache.users = Data;
     }
     /**
-     * @global
      * @typedef {object} ChannelOptions
      * @property {Function} filter
      * @property {ChannelManager} ChannelData
