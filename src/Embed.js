@@ -1,11 +1,11 @@
-const { MessageEmbed } = require("discord.js")
+const { MessageEmbed } = require("discord.js");
 /**
-     * @typedef {Array} EmbedOptions
-     * @description Array to extend from
-     */
-    /**
-     * @module src/Embed
-     */
+ * @typedef {Array} EmbedOptions
+ * @description Array to extend from
+ */
+/**
+ * @module src/Embed
+ */
 /**
  * @extends Discord.js.MessageEmbed
  * @class
@@ -14,13 +14,4 @@ const { MessageEmbed } = require("discord.js")
  * new RichEmbed();
  * @since 0.1.14-beta
  */
-module.exports.RichEmbed = class extends MessageEmbed {
-
-    /**
-     * @param {EmbedOptions} embed
-     */
-    constructor(embed = []) {
-        super(embed)
-        return this;
-    }
-}
+module.exports.RichEmbed = MessageEmbed;
