@@ -58,10 +58,12 @@ module.exports.ParodyClient = class extends Client {
     }
     if (ChannelOptions.ChannelData) {
       var { ChannelData } = ChannelOptions;
+      /**@private */
       this._channels = this.cache._channels = ChannelData.filter(
         ChannelOptions.filter
       );
     }
+    /**@private */
     this._channels = this.channels.cache.filter(ChannelOptions.filter);
   }
 };
