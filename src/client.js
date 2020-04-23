@@ -11,7 +11,8 @@ const {
 //@ts-ignore 1005
 /**
  * Parity client hub
- * @class ParodyClient
+ * @class discord.js-parody.ParodyClient
+ * @public
  * @extends {Client} Discord.js Client
  * @since 0.0.1
  */
