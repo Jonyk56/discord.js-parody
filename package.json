@@ -1,6 +1,6 @@
 {
   "name": "@jonyk56/discord.js-parody",
-  "version": "0.1.16-dev",
+  "version": "0.1.17-beta-01",
   "description": "",
   "main": "index.js",
   "dependencies": {
