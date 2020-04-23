@@ -40,7 +40,9 @@ module.exports.ParodyClient = class extends Client {
     /**
      * @typedef {object} ChannelOptions
      * @property {Function} filter
+     * @description filter to use during processing
      * @property {ChannelManager} ChannelData
+     * @description Data of the channel
      */
     /**
      * @method ChannelCache
