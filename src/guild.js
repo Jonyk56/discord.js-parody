@@ -47,11 +47,14 @@ module.exports.GHUB = class extends GuildManager {
    * @param {GuildCollection|Array} GuildInstance
    */
   static GetSize(GuildInstance = []) {
-    if (GuildInstance instanceof Array){
-      GuildInstance = this.guilds.cache
+    if (GuildInstance instanceof Array) {
+      GuildInstance = this.guilds.cache;
     }
-    if (!(GuildInstance instanceof Array) && !(GuildInstance instanceof Collection)){
-      throw new Error("GuildInstance must be instance of Array, or Collection")
-    } 
+    if (
+      !(GuildInstance instanceof Array) &&
+      !(GuildInstance instanceof Collection)
+    ) {
+      throw new Error("GuildInstance must be instance of Array, or Collection");
+    }
   }
 };
