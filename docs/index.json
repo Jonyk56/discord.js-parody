@@ -622,7 +622,7 @@
     "__docId__": 51,
     "kind": "file",
     "name": "src/client.js",
-    "content": "const {\n    UserManager,\n    ChannelManager,\n    GuildManager,\n    Client,\n    Collection,\n} = require(\"discord.js\");\n/**\n * @module src/client\n */\n//@ts-ignore 1005\n/**\n * Parity client hub\n * @class discord.js-parody.ParodyClient\n * @public\n * @extends {Client} Discord.js Client\n * @since 0.0.1\n */\nmodule.exports.ParodyClient = class extends Client {\n    constructor(options = {}) {\n        super(options);\n        return this;\n    }\n    /**\n     * @global\n     * @typedef {UserManager} UserCacheData\n     * @description Data of user collections\n     */\n\n    /**\n     * Gains User cache, moves all of it to a seperate object\n     * @method UserCache\n     * @public\n     * @param {UserCacheData} Data\n     * @returns null\n     */\n    UserCache(Data = {}) {\n        if (Data == {}) {\n            Data = this;\n        }\n        this._users = this._cache.users = Data;\n    }\n    /**\n     * @global\n     * @typedef {object} ChannelOptions\n     * @property {Function} filter\n     * @property {ChannelManager} ChannelData\n     */\n    /**\n     * @method ChannelCache\n     * @param {ChannelOptions} ChannelOptions\n     * @public\n     * @returns null\n     * @example \n     * Client.ChannelCache({ filter: _ => _.id > 0}).each( channel => console.log(channel.name))\n     */\n    ChannelCache(ChannelOptions = {}) {\n        if (!ChannelOptions.filter) {\n            throw new Error(\"Filter function required\");\n        }\n        if (ChannelOptions.ChannelData) {\n            var { ChannelData } = ChannelOptions;\n            this._channels = this.cache._channels = ChannelData.filter(ChannelOptions.filter)\n        }\n        this._channels = this.channels.cache.filter(ChannelOptions.filter)\n    }\n};\n",
+    "content": "const {\n  UserManager,\n  ChannelManager,\n  GuildManager,\n  Client,\n  Collection,\n} = require(\"discord.js\");\n/**\n * @module src/client\n */\n//@ts-ignore 1005\n/**\n * Parity client hub\n * @class discord.js-parody.ParodyClient\n * @public\n * @extends {Client} Discord.js Client\n * @since 0.0.1\n */\nclass ParodyClient extends Client {\n  /**\n   *\n   * @param {ClientOptions} options\n   * @returns  {ParodyClient} Client\n   */\n  constructor(options = {}) {\n    super(options);\n    return this;\n  }\n  /**\n   * @global\n   * @typedef {UserManager} UserCacheData\n   * @description Data of user collections\n   */\n\n  /**\n   * Gains User cache, moves all of it to a seperate object\n   * @method UserCache\n   * @public\n   * @param {UserCacheData} Data\n   * @returns null\n   */\n  UserCache(Data = {}) {\n    if (Data == {}) {\n      Data = this;\n    }\n    this._users = this._cache.users = Data;\n  }\n  /**\n   * @global\n   * @typedef {object} ChannelOptions\n   * @property {Function} filter\n   * @property {ChannelManager} ChannelData\n   */\n  /**\n   * @method ChannelCache\n   * @param {ChannelOptions} ChannelOptions\n   * @public\n   * @returns null\n   * @example\n   * Client.ChannelCache({ filter: _ => _.id > 0}).each( channel => console.log(channel.name))\n   */\n  ChannelCache(ChannelOptions = {}) {\n    if (!ChannelOptions.filter) {\n      throw new Error(\"Filter function required\");\n    }\n    if (ChannelOptions.ChannelData) {\n      var { ChannelData } = ChannelOptions;\n      this._channels = this.cache._channels = ChannelData.filter(\n        ChannelOptions.filter\n      );\n    }\n    this._channels = this.channels.cache.filter(ChannelOptions.filter);\n  }\n}\n\nmodule.exports = ParodyClient;\n",
     "static": true,
     "longname": "/home/jtech/discord.js-extended/src/client.js",
     "access": "public",
@@ -686,17 +686,42 @@
     "static": false,
     "longname": "src/client.js~ParodyClient#constructor",
     "access": "public",
-    "description": null,
-    "lineNumber": 20,
-    "undocument": true
+    "description": "",
+    "lineNumber": 25,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": " {ParodyClient} Client"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "ClientOptions"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "ParodyClient"
+      ],
+      "spread": false,
+      "description": "Client"
+    }
   },
   {
     "__docId__": 55,
     "kind": "typedef",
     "name": "UserCacheData",
-    "memberof": "src/client.js",
+    "memberof": "src/client.js~ParodyClient",
     "static": true,
-    "longname": "src/client.js~UserCacheData",
+    "longname": "src/client.js~ParodyClient.UserCacheData",
     "access": "public",
     "description": "",
     "unknown": [
@@ -728,7 +753,7 @@
     "longname": "src/client.js~ParodyClient#UserCache",
     "access": "public",
     "description": "Gains User cache, moves all of it to a seperate object",
-    "lineNumber": 37,
+    "lineNumber": 42,
     "unknown": [
       {
         "tagName": "@method",
@@ -769,7 +794,7 @@
     "longname": "src/client.js~ParodyClient#_users",
     "access": "private",
     "description": null,
-    "lineNumber": 41,
+    "lineNumber": 46,
     "undocument": true,
     "type": {
       "types": [
@@ -781,9 +806,9 @@
     "__docId__": 58,
     "kind": "typedef",
     "name": "ChannelOptions",
-    "memberof": "src/client.js",
+    "memberof": "src/client.js~ParodyClient",
     "static": true,
-    "longname": "src/client.js~ChannelOptions",
+    "longname": "src/client.js~ParodyClient.ChannelOptions",
     "access": "public",
     "description": "",
     "unknown": [
@@ -836,7 +861,7 @@
     "examples": [
       "Client.ChannelCache({ filter: _ => _.id > 0}).each( channel => console.log(channel.name))"
     ],
-    "lineNumber": 57,
+    "lineNumber": 62,
     "unknown": [
       {
         "tagName": "@method",
@@ -877,7 +902,7 @@
     "longname": "src/client.js~ParodyClient#_channels",
     "access": "private",
     "description": null,
-    "lineNumber": 63,
+    "lineNumber": 68,
     "undocument": true,
     "type": {
       "types": [
@@ -918,6 +943,17 @@
     "ignore": true
   },
   {
+    "__docId__": 64,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "module.exports = {\n    ...require(\"./client\"),\n    ...require(\"./Embed\"),\n    ...require(\"discord.js\"),\n    ...require(\"./guild\")\n}",
+    "static": true,
+    "longname": "/home/jtech/discord.js-extended/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
     "kind": "index",
     "content": "# @jonyk56/discord.js-parody\n___\n\n![npm (scoped)](https://img.shields.io/npm/v/@jonyk56/discord.js-parody?style=plastic)\n\n[docs](http://jonyk56.github.io/discord.js-parody/index.html)\n\n[![Discord Banner 2](https://discordapp.com/api/guilds/702215705898254338/widget.png?style=banner2)](//discord.gg/WPbF3eV)\n\n",
     "longname": "/home/jtech/discord.js-extended/README.md",
@@ -927,7 +963,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@jonyk56/discord.js-parody\",\n  \"version\": \"0.1.17-beta-01\",\n  \"description\": \"\",\n  \"main\": \"src/index.js\",\n  \"dependencies\": {\n    \"discord.js\": \"^12.2.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  },\n  \"devDependencies\": {\n    \"eslint\": \"^6.8.0\"\n  },\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"postinstall\": \"npm i\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"_moduleAliases\": {}\n}\n",
+    "content": "{\n  \"name\": \"@jonyk56/discord.js-parody\",\n  \"version\": \"0.1.18-beta-02\",\n  \"description\": \"\",\n  \"main\": \"src/index.js\",\n  \"dependencies\": {\n    \"discord.js\": \"^12.2.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  },\n  \"devDependencies\": {\n    \"eslint\": \"^6.8.0\"\n  },\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"postinstall\": \"npm i\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"_moduleAliases\": {}\n}\n",
     "longname": "/home/jtech/discord.js-extended/package.json",
     "name": "package.json",
     "static": true,

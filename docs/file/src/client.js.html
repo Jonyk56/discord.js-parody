@@ -30,19 +30,17 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-EmbedOptions">EmbedOptions</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ChannelOptions">ChannelOptions</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-UserCacheData">UserCacheData</a></span></span></li>
 </ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/client.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const {
-    UserManager,
-    ChannelManager,
-    GuildManager,
-    Client,
-    Collection,
+  UserManager,
+  ChannelManager,
+  GuildManager,
+  Client,
+  Collection,
 } = require(&quot;discord.js&quot;);
 /**
  * @module src/client
@@ -55,55 +53,64 @@
  * @extends {Client} Discord.js Client
  * @since 0.0.1
  */
-module.exports.ParodyClient = class extends Client {
-    constructor(options = {}) {
-        super(options);
-        return this;
-    }
-    /**
-     * @global
-     * @typedef {UserManager} UserCacheData
-     * @description Data of user collections
-     */
+class ParodyClient extends Client {
+  /**
+   *
+   * @param {ClientOptions} options
+   * @returns  {ParodyClient} Client
+   */
+  constructor(options = {}) {
+    super(options);
+    return this;
+  }
+  /**
+   * @global
+   * @typedef {UserManager} UserCacheData
+   * @description Data of user collections
+   */
 
-    /**
-     * Gains User cache, moves all of it to a seperate object
-     * @method UserCache
-     * @public
-     * @param {UserCacheData} Data
-     * @returns null
-     */
-    UserCache(Data = {}) {
-        if (Data == {}) {
-            Data = this;
-        }
-        this._users = this._cache.users = Data;
+  /**
+   * Gains User cache, moves all of it to a seperate object
+   * @method UserCache
+   * @public
+   * @param {UserCacheData} Data
+   * @returns null
+   */
+  UserCache(Data = {}) {
+    if (Data == {}) {
+      Data = this;
     }
-    /**
-     * @global
-     * @typedef {object} ChannelOptions
-     * @property {Function} filter
-     * @property {ChannelManager} ChannelData
-     */
-    /**
-     * @method ChannelCache
-     * @param {ChannelOptions} ChannelOptions
-     * @public
-     * @returns null
-     * @example 
-     * Client.ChannelCache({ filter: _ =&gt; _.id &gt; 0}).each( channel =&gt; console.log(channel.name))
-     */
-    ChannelCache(ChannelOptions = {}) {
-        if (!ChannelOptions.filter) {
-            throw new Error(&quot;Filter function required&quot;);
-        }
-        if (ChannelOptions.ChannelData) {
-            var { ChannelData } = ChannelOptions;
-            this._channels = this.cache._channels = ChannelData.filter(ChannelOptions.filter)
-        }
-        this._channels = this.channels.cache.filter(ChannelOptions.filter)
+    this._users = this._cache.users = Data;
+  }
+  /**
+   * @global
+   * @typedef {object} ChannelOptions
+   * @property {Function} filter
+   * @property {ChannelManager} ChannelData
+   */
+  /**
+   * @method ChannelCache
+   * @param {ChannelOptions} ChannelOptions
+   * @public
+   * @returns null
+   * @example
+   * Client.ChannelCache({ filter: _ =&gt; _.id &gt; 0}).each( channel =&gt; console.log(channel.name))
+   */
+  ChannelCache(ChannelOptions = {}) {
+    if (!ChannelOptions.filter) {
+      throw new Error(&quot;Filter function required&quot;);
     }
-};
+    if (ChannelOptions.ChannelData) {
+      var { ChannelData } = ChannelOptions;
+      this._channels = this.cache._channels = ChannelData.filter(
+        ChannelOptions.filter
+      );
+    }
+    this._channels = this.channels.cache.filter(ChannelOptions.filter);
+  }
+}
+
+module.exports = ParodyClient;
 </code></pre>
 
 </div>

@@ -300,21 +300,15 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/client.js~channeloptions",
-    "typedef/index.html#static-typedef-ChannelOptions",
-    "src/client.js~ChannelOptions",
-    "typedef"
-  ],
-  [
-    "src/client.js~usercachedata",
-    "typedef/index.html#static-typedef-UserCacheData",
-    "src/client.js~UserCacheData",
-    "typedef"
-  ],
-  [
     "src/guild.js",
     "file/src/guild.js.html",
     "src/guild.js",
+    "file"
+  ],
+  [
+    "src/index.js",
+    "file/src/index.js.html",
+    "src/index.js",
     "file"
   ]
 ]

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/guild.js | @jonyk56/discord.js-parody</title>
+  <title data-ice="title">src/index.js | @jonyk56/discord.js-parody</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -34,30 +34,13 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/guild.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const {
-  Collection,
-  Guild,
-  GuildAuditLogs,
-  GuildChannel,
-  GuildEmoji,
-  GuildMember,
-  GuildChannelManager,
-  GuildEmojiManager,
-  GuildEmojiRoleManager,
-  GuildManager,
-  GuildMemberManager,
-  GuildMemberRoleManager,
-  RoleManager,
-  Role,
-} = require(&quot;discord.js&quot;);
-
-/**
- * @module src/guild
- * @since 0.1.16-beta
- */
-
- </code></pre>
+<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">module.exports = {
+    ...require(&quot;./client&quot;),
+    ...require(&quot;./Embed&quot;),
+    ...require(&quot;discord.js&quot;),
+    ...require(&quot;./guild&quot;)
+}</code></pre>
 
 </div>
 

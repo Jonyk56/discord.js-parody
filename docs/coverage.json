@@ -1,7 +1,7 @@
 {
-  "coverage": "33.33%",
+  "coverage": "44.44%",
   "expectCount": 9,
-  "actualCount": 3,
+  "actualCount": 4,
   "files": {
     "src/Embed.js": {
       "expectCount": 1,
@@ -12,12 +12,11 @@
     },
     "src/client.js": {
       "expectCount": 7,
-      "actualCount": 3,
+      "actualCount": 4,
       "undocumentLines": [
         1,
-        20,
-        41,
-        63
+        46,
+        68
       ]
     },
     "src/guild.js": {
