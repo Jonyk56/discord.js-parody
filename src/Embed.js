@@ -15,3 +15,14 @@ const { MessageEmbed } = require("discord.js");
  * @since 0.1.14-beta
  */
 module.exports.RichEmbed = MessageEmbed;
+
+/**
+ * @function
+ * @public
+ * @since 1.0.0
+ * @example
+ * let embed = new PDiscord.RichEmbed()
+ * Pdiscord.Rembed_(embed) //true
+ * 
+ */
+module.exports.Rembed_ = (embed) => embed instanceof MessageEmbed;
