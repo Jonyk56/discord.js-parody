@@ -7,3 +7,5 @@ ___
 
 [![Discord Banner 2](https://discordapp.com/api/guilds/702215705898254338/widget.png?style=banner2)](//discord.gg/WPbF3eV)
 
+
+***DISCORD.JS-PARODY WILL NOT WORK WITH DISCORD.JS V11 AND BELOW!!! it will destroy your discord.js client with errors***
