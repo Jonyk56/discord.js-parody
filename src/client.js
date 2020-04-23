@@ -9,13 +9,7 @@ const {
  * @module src/client
  */
 //@ts-ignore 1005
-/**
- * Parity client hub
- * @class discord.js-parody.ParodyClient
- * @public
- * @extends {Client} Discord.js Client
- * @since 0.0.1
- */
+
 module.exports.ParodyClient = class extends Client {
     /**
      * 
