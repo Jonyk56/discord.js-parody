@@ -50,6 +50,8 @@ module.exports.GHUB = class extends GuildManager {
     if (GuildInstance instanceof Array){
       GuildInstance = this.guilds.cache
     }
-    
+    if (!(GuildInstance instanceof Array) && !(GuildInstance instanceof Collection)){
+      throw new Error("GuildInstance must be instance of Array, or Collection")
+    } 
   }
 };
