@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Home - Documentation</title>
+    <title>client.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,33 +29,95 @@
 
 <div id="main">
     
+    <h1 class="page-title">client.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const {
+  UserManager,
+  ChannelManager,
+  GuildManager,
+  Client,
+  Collection,
+} = require("discord.js");
+/**
+ * @module src/client
+ */
+//@ts-ignore 1005
+/**
+ * Parity client hub
+ * @class discord.js-parody.ParodyClient
+ * @public
+ * @extends {Client} Discord.js Client
+ * @since 0.0.1
+ */
+class ParodyClient extends Client {
+  /**
+   *
+   * @param {ClientOptions} options
+   * @returns  {ParodyClient} Client
+   */
+  constructor(options = {}) {
+    super(options);
+    return this;
+  }
+  /**
+   * @global
+   * @typedef {UserManager} UserCacheData
+   * @description Data of user collections
+   */
 
+  /**
+   * Gains User cache, moves all of it to a seperate object
+   * @method UserCache
+   * @public
+   * @param {UserCacheData} Data
+   * @returns null
+   */
+  UserCache(Data = {}) {
+    if (Data == {}) {
+      Data = this;
+    }
+    this._users = this._cache.users = Data;
+  }
+  /**
+   * @global
+   * @typedef {object} ChannelOptions
+   * @property {Function} filter
+   * @property {ChannelManager} ChannelData
+   */
+  /**
+   * @method ChannelCache
+   * @param {ChannelOptions} ChannelOptions
+   * @public
+   * @returns null
+   * @example
+   * Client.ChannelCache({ filter: _ => _.id > 0}).each( channel => console.log(channel.name))
+   */
+  ChannelCache(ChannelOptions = {}) {
+    if (!ChannelOptions.filter) {
+      throw new Error("Filter function required");
+    }
+    if (ChannelOptions.ChannelData) {
+      var { ChannelData } = ChannelOptions;
+      this._channels = this.cache._channels = ChannelData.filter(
+        ChannelOptions.filter
+      );
+    }
+    this._channels = this.channels.cache.filter(ChannelOptions.filter);
+  }
+}
 
-
-
-
-
-
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>@jonyk56/discord.js-parody</h1>
-<hr>
-<p><img src="https://img.shields.io/npm/v/@jonyk56/discord.js-parody?style=plastic" alt="npm (scoped)"></p>
-<p><a href="http://jonyk56.github.io/discord.js-parody/index.html">docs</a></p>
-<p><a href="//discord.gg/WPbF3eV"><img src="https://discordapp.com/api/guilds/702215705898254338/widget.png?style=banner2" alt="Discord Banner 2"></a></p></article>
+module.exports = ParodyClient;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

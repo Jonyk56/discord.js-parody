@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Home - Documentation</title>
+    <title>Embed.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,33 +29,36 @@
 
 <div id="main">
     
+    <h1 class="page-title">Embed.js</h1>
+    
 
     
 
 
 
     
-
-
-
-
-
-
-
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>@jonyk56/discord.js-parody</h1>
-<hr>
-<p><img src="https://img.shields.io/npm/v/@jonyk56/discord.js-parody?style=plastic" alt="npm (scoped)"></p>
-<p><a href="http://jonyk56.github.io/discord.js-parody/index.html">docs</a></p>
-<p><a href="//discord.gg/WPbF3eV"><img src="https://discordapp.com/api/guilds/702215705898254338/widget.png?style=banner2" alt="Discord Banner 2"></a></p></article>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const { MessageEmbed } = require("discord.js");
+/**
+ * @typedef {Array} EmbedOptions
+ * @description Array to extend from
+ */
+/**
+ * @module src/Embed
+ */
+/**
+ * @extends Discord.js.MessageEmbed
+ * @class
+ * @public
+ * @example
+ * new RichEmbed();
+ * @since 0.1.14-beta
+ */
+module.exports.RichEmbed = MessageEmbed;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

@@ -72,8 +72,5 @@ class ParodyClient extends Client {
     this._channels = this.channels.cache.filter(ChannelOptions.filter);
   }
 }
-try {
-  export default ParodyClient;
-} catch (e) {
-  module.exports = ParodyClient;
-}
+
+module.exports = ParodyClient;
