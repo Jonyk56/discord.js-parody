@@ -294,12 +294,6 @@ window.esdocSearchIndex = [
     "typedef"
   ],
   [
-    "src/client.js",
-    "file/src/client.js.html",
-    "src/client.js",
-    "file"
-  ],
-  [
     "src/guild.js",
     "file/src/guild.js.html",
     "src/guild.js",
