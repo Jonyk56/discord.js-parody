@@ -1,11 +1,12 @@
 {
   "name": "@jonyk56/discord.js-parody",
-  "version": "0.1.18-beta-02",
+  "version": "0.1.18-beta-03",
   "description": "",
   "main": "src/index.js",
   "dependencies": {
     "discord.js": "^12.2.0",
     "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0"
   },
   "devDependencies": {
