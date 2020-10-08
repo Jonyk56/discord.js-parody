@@ -9,3 +9,9 @@ ___
 
 
 ***DISCORD.JS-PARODY WILL NOT WORK WITH DISCORD.JS V11 AND BELOW!!! it will destroy your discord.js client with errors***
+
+
+
+
+
+This project is now archived due to discord v11 no longer being usable ( major api updates from discord )
